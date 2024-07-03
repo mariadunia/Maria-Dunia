@@ -1,3 +1,6 @@
+:root{
+    --primary-color: rgb(90, 0, 93);
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,11 +14,13 @@ body {
 
 .container {
     background-color: white;
+    text-align: center;
 }
 
 #about-me {
     color: black;
     line-height: 1.5rem;
+
 }
 
 .container {
@@ -89,11 +94,55 @@ header a:hover {
 html {
     scroll-behavior: smooth;
 }
-@media screen and (max-width:600px )
-{
-    #about-me{
+
+@media screen and (max-width:600px) {
+    #about-me {
         text-align: center;
 
     }
 }
 
+.flex-container {
+    flex-direction: column;
+    text-align: center;
+}
+
+/*Footer Styling*/
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+footer a {
+    color: white;
+}
+
+footer .socials {
+    margin: 1rem;
+}
+
+footer .socials a {
+    margin: 0 1rem;
+}
+
+footer .copy-right p {
+    margin: 2rem;
+}
+
+footer i {
+    font-size: 20px;
+}
+footer li{
+    font-size: 15px;
+}
