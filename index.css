@@ -1,10 +1,17 @@
-:root{
+:root {
     --primary-color: rgb(90, 0, 93);
+    --secondary-color: rgb(186, 66, 190);
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 55% 45%;
 }
 
 
@@ -12,24 +19,84 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
+/*Contact me*/
+.contact-me {
     background-color: white;
     text-align: center;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.contact-me h2 {
+    color: var(--primary-color);
+    border-bottom: 2px var(--secondary-color) solid;
+    padding: 2rem;
+
+}
+
+.contact-me form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-me .input {
+    margin: 2rem 0;
+}
+
+.contact-me button {
+    width: 30rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+}
+
+.contact-me input,
+.contact-me textarea {
+    border: none;
+    width: 30rem;
+    padding: 0.5rem;
+    border: solid var(--primary-color) 1px;
+    border-radius: 5px;
+
+}
+
+.contact-me button {
+    width: 30rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    align-self: center;
+}
+
+/**/
 #about-me {
+    padding: 50px;
     color: black;
     line-height: 1.5rem;
-
+    text-align: center;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container {
-    margin: 30px;
+#about-me h1 {
+    line-height: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px var(--secondary-color) solid;
+    padding: 2rem;
 }
 
-.container {
-    padding: 20px;
+#luna h2 {
+    line-height: 1.5rem;
 }
+
 
 h1 {
     margin-top: 20px;
@@ -58,7 +125,7 @@ label {
 header ul {
     display: flex;
 
-    list-style-type: none
+    list-style-type: none;
 }
 
 li {
@@ -87,24 +154,53 @@ a {
 }
 
 header a:hover {
-    background-color: brown;
+    background-color: var(--secondary-color);
     color: white;
+    translate: -15deg;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-@media screen and (max-width:600px) {
-    #about-me {
-        text-align: center;
-
-    }
-}
-
 .flex-container {
     flex-direction: column;
     text-align: center;
+}
+
+/*Header*/
+
+header {
+    height: 100vh;
+}
+
+header nav {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    color:white;
+}
+header nav a {
+    color: #fff;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header h1 {
+    color: var(--primary-color);
+}
+
+header button {
+    max-width: max-content;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
 }
 
 /*Footer Styling*/
@@ -117,6 +213,10 @@ footer {
     align-items: center;
     justify-content: center;
 
+}
+
+footer nav {
+    background: none;
 }
 
 footer nav ul {
@@ -143,6 +243,16 @@ footer .copy-right p {
 footer i {
     font-size: 20px;
 }
-footer li{
+
+footer li {
     font-size: 15px;
+}
+
+
+
+@media screen and (max-width:600px) {
+    #about-me {
+        text-align: center;
+
+    }
 }
